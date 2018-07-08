@@ -1,4 +1,4 @@
-Drop[] drops = new Drop[500];
+Drop[] drops = new Drop[100];
 
 void setup() {
   size(displayWidth, displayHeight);

@@ -6,9 +6,9 @@ class Drop {
   float yspeed;
 
   Drop() {
-    x  = random(width);
-    y  = random(-500, -50);
-    z  = random(0, 20);
+    x  = random(0, displayWidth);
+    y  = random(-displayHeight, -50);
+    z  = random(0, displayHeight/25);
     len = map(z, 0, 20, 10, 20);
     yspeed  = map(z, 0, 20, 1, 20);
   }
@@ -19,7 +19,7 @@ class Drop {
     yspeed = yspeed + grav;
 
     if (y > height) {
-      y = random(-200, -100);
+      y = random(displayHeight*-0.5, -100);
       yspeed = map(z, 0, 20, 4, 10);
     }
   }
